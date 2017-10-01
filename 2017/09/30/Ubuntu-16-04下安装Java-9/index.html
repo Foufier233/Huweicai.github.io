@@ -238,7 +238,7 @@
 
     
         <meta property="article:published_time" content="Sat Sep 30 2017 21:35:46 GMT+0800" />
-        <meta property="article:modified_time" content="Sat Sep 30 2017 21:36:28 GMT+0800" />
+        <meta property="article:modified_time" content="Sun Oct 01 2017 21:33:03 GMT+0800" />
     
 
     <!-- The Twitter Card protocol -->
@@ -265,7 +265,7 @@
     "mainEntityOfPage": "www.oppoo.club/2017/09/30/Ubuntu-16-04下安装Java-9/index.html",
     "headline": "Ubuntu 16.04下安装Java 9",
     "datePublished": "Sat Sep 30 2017 21:35:46 GMT+0800",
-    "dateModified": "Sat Sep 30 2017 21:36:28 GMT+0800",
+    "dateModified": "Sun Oct 01 2017 21:33:03 GMT+0800",
     "author": {
         "@type": "Person",
         "name": "Anonymous Hu",
@@ -358,7 +358,7 @@
     </button>
 
     <ul class="post-toc-wrap mdl-menu mdl-menu--bottom-left mdl-js-menu mdl-js-ripple-effect" for="post-toc-trigger-btn" style="max-height:80vh; overflow-y:scroll;">
-        <ol class="post-toc"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#4检验是否安装成功"><span class="post-toc-number">1.</span> <span class="post-toc-text">4检验是否安装成功</span></a></li></ol>
+        <ol class="post-toc"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#1-下载JDK"><span class="post-toc-number">1.</span> <span class="post-toc-text">1 下载JDK</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#2-解压JDK"><span class="post-toc-number">2.</span> <span class="post-toc-text">2 解压JDK</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#3-配置环境变量"><span class="post-toc-number">3.</span> <span class="post-toc-text">3 配置环境变量</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#4-检验是否安装成功"><span class="post-toc-number">4.</span> <span class="post-toc-text">4 检验是否安装成功</span></a></li></ol>
     </ul>
     
 
@@ -500,13 +500,11 @@
                 <!-- Post Content -->
                 <div id="post-content" class="mdl-color-text--grey-700 mdl-card__supporting-text fade out">
     
-        <p>##1 下载JDK<br>去JAVA官网上把自己对应自己版本jdk下好 ( 附下载链接<br><a href="http://www.oracle.com/technetwork/java/javase/downloads/jdk9-downloads-3848520.html" target="_blank" rel="external">http://www.oracle.com/technetwork/java/javase/downloads/jdk9-downloads-3848520.html</a>)</p>
+        <h2 id="1-下载JDK"><a href="#1-下载JDK" class="headerlink" title="1 下载JDK"></a>1 下载JDK</h2><p>去JAVA官网上把自己对应自己版本jdk下好 ( 附下载链接<br><a href="http://www.oracle.com/technetwork/java/javase/downloads/jdk9-downloads-3848520.html" target="_blank" rel="external">http://www.oracle.com/technetwork/java/javase/downloads/jdk9-downloads-3848520.html</a>)</p>
 <p><img src="http://upload-images.jianshu.io/upload_images/8145046-9c10dbf48c235b4a.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="图片.png"></p>
-<p>##2 解压JDK </p>
-<p>打开终端，先cd到你要想安装java的位置，比如说我是安装到/home/huweicai/software目录下，因此使用cd命令：<br><code>cd /home/huweicai/software</code><br>然后使用<br><code>sudo tar -zxvf  /home/huweicai/下载/jdk-8u131-linux-x64.tar.gz</code><br>我大概解释一下这条命令：sudo是使用用户权限，tar是解压和压缩的一个指令，-zxvf则是对应的参数，而后面这一串是jdk的文件位置</p>
-<p>##3 配置环境变量</p>
-<p> 在终端输入：<br><code>sudo  gedit  /etc/profile</code><br>（就相当于在windos下用记事本打开配置文件） 在末端加上（第一行后面为你解压的jdk路径）<br> <code>export JAVA_HOME=/home/huweicai/software/jdk1.8.0_131</code><br><code>export JRE_HOME=${JAVA_HOME}/jre</code><br><code>export CLASSPATH=.:${JAVA_HOME}/lib:${JRE_HOME}/lib</code><br><code>export PATH=${JAVA_HOME}/bin:$PATH</code><br>（第一行后面为你解压的jdk路径）source /etc/profile   我把这个单列出来因为当初在这里卡了特别特别久，后来才发现原来我修改完之后还没有生效，还要让系统运行一下那个文件，因此需要在终端中输入:source /etc/profile 才算配置好了环境变量5 测试jdk是否安装成功   </p>
-<h2 id="4检验是否安装成功"><a href="#4检验是否安装成功" class="headerlink" title="4检验是否安装成功"></a>4检验是否安装成功</h2><p>在终端中输入java -verison，如果出来如下输出的话，那就说明你配置成功了，Congradulations，jdk就安装好了 ，如果失败的话，自己想办法吧</p>
+<h2 id="2-解压JDK"><a href="#2-解压JDK" class="headerlink" title="2 解压JDK"></a>2 解压JDK</h2><p>打开终端，先cd到你要想安装java的位置，比如说我是安装到/home/huweicai/software目录下，因此使用cd命令：<br><code>cd /home/huweicai/software</code><br>然后使用<br><code>sudo tar -zxvf  /home/huweicai/下载/jdk-8u131-linux-x64.tar.gz</code><br>我大概解释一下这条命令：sudo是使用用户权限，tar是解压和压缩的一个指令，-zxvf则是对应的参数，而后面这一串是jdk的文件位置</p>
+<h2 id="3-配置环境变量"><a href="#3-配置环境变量" class="headerlink" title="3 配置环境变量"></a>3 配置环境变量</h2><p> 在终端输入：<br><code>sudo  gedit  /etc/profile</code><br>（就相当于在windos下用记事本打开配置文件） 在末端加上（第一行后面为你解压的jdk路径）<br> <code>export JAVA_HOME=/home/huweicai/software/jdk1.8.0_131</code><br><code>export JRE_HOME=${JAVA_HOME}/jre</code><br><code>export CLASSPATH=.:${JAVA_HOME}/lib:${JRE_HOME}/lib</code><br><code>export PATH=${JAVA_HOME}/bin:$PATH</code><br>（第一行后面为你解压的jdk路径）source /etc/profile   我把这个单列出来因为当初在这里卡了特别特别久，后来才发现原来我修改完之后还没有生效，还要让系统运行一下那个文件，因此需要在终端中输入:source /etc/profile 才算配置好了环境变量5 测试jdk是否安装成功 </p>
+<h2 id="4-检验是否安装成功"><a href="#4-检验是否安装成功" class="headerlink" title="4 检验是否安装成功"></a>4 检验是否安装成功</h2><p>在终端中输入java -verison，如果出来如下输出的话，那就说明你配置成功了，Congradulations，jdk就安装好了 ，如果失败的话，自己想办法吧</p>
 <p><img src="http://upload-images.jianshu.io/upload_images/8145046-be489e37d63df439.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="图片.png"></p>
 <p>﻿﻿</p>
 
